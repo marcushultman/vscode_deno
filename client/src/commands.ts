@@ -148,6 +148,7 @@ export function startLanguageServer(
       ...process.env,
       "DENO_V8_FLAGS": getV8Flags(),
       "NO_COLOR": true,
+      "NPM_CONFIG_REGISTRY": vscode.workspace.getConfiguration(EXTENSION_NS).get("npmRegistry"),
     };
 
     const serverOptions: ServerOptions = {
